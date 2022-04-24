@@ -1,0 +1,1 @@
+export const MOBILE_OPEN = "MOBILE_OPEN";

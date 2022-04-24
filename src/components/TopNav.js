@@ -6,14 +6,20 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
+import {useSelector, useDispatch} from "react-redux";
+import { toggleMobileOpen } from "../redux/actions/topNav";
+
 const drawerWidth = 240;
 
 const TopNav = () => {
-    
+  const data = useSelector((state) => state)
+  const dispatch = useDispatch();
+  const {mobileOpen} = data.topNavReducer;
   //NOTE: repeats in App.js - state has to be passed upwards to set state to open drawer in mobile
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  // const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    // setMobileOpen(!mobileOpen);
+    dispatch(toggleMobileOpen(!mobileOpen));
   };
 
   return (
