@@ -1,24 +1,14 @@
 import React from "react";
 import TopNav from "./components/TopNav";
 import LeftNav from "./components/LeftNav";
-import logo from "./logo.svg";
 import "./App.css";
 
 import {
   Box,
   CssBaseline,
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Toolbar,
   Typography,
 } from "@mui/material/";
-
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMobileOpen } from "./redux/actions/topNav";
@@ -36,34 +26,6 @@ const App = (props) => {
   const handleDrawerToggle = () => {
     dispatch(toggleMobileOpen(!mobileOpen));
   };
-
-  const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
