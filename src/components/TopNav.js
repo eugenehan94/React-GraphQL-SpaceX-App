@@ -1,5 +1,5 @@
 import React from "react";
-
+import {DRAWER_WIDTH} from "../_helper/constant";
 import AppBar from "@mui/material/AppBar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -9,7 +9,6 @@ import Typography from "@mui/material/Typography";
 import {useSelector, useDispatch} from "react-redux";
 import { toggleMobileOpen } from "../redux/actions/topNav";
 
-const drawerWidth = 240;
 
 const TopNav = () => {
   const data = useSelector((state) => state)
@@ -26,8 +25,8 @@ const TopNav = () => {
     <AppBar
       position="fixed"
       sx={{
-        width: { sm: `calc(100% - ${drawerWidth}px)` },
-        ml: { sm: `${drawerWidth}px` },
+        width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
+        ml: { sm: `${DRAWER_WIDTH}px` },
       }}
     >
       <Toolbar>
@@ -41,7 +40,6 @@ const TopNav = () => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap component="div">
-          Responsive drawer
         </Typography>
       </Toolbar>
     </AppBar>

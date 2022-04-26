@@ -9,16 +9,26 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 //Graphql for spaceX api https://studio.apollographql.com/public/SpaceX-pxxbxen/home?variant=current
+
+const client = new ApolloClient({
+  uri: "https://api.spacex.land/graphql/",
+  cache: new InMemoryCache()
+});
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
+    </ApolloProvider>
   </React.StrictMode>
 );
 
