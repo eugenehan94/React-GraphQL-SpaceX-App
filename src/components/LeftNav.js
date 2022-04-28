@@ -29,7 +29,7 @@ const LeftNav = (props) => {
   const drawer = (
     <div>
       <Toolbar />
-      <Divider />
+      {/* <Divider /> */}
       <List>
         <ListItem button component={Link} to="/">
             <ListItemIcon>
@@ -37,12 +37,17 @@ const LeftNav = (props) => {
             </ListItemIcon>
             <ListItemText primary="Welcome" />
         </ListItem>
-
         <ListItem button component={Link} to="/companyInfo">
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
           <ListItemText primary="Info"/>
+        </ListItem>
+        <ListItem button component={Link} to="/falcon1">
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText primary="Falcon 1"/>
         </ListItem>
         {/* {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
@@ -88,11 +93,14 @@ const LeftNav = (props) => {
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: DRAWER_WIDTH,
+            backgroundColor: "#181C1F",
+            color: "#FFFFFF"
           },
         }}
       >
         {drawer}
       </Drawer>
+      {/* https://www.schemecolor.com/spacex-website.php */}
       <Drawer
         variant="permanent"
         sx={{
@@ -100,7 +108,10 @@ const LeftNav = (props) => {
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: DRAWER_WIDTH,
+            backgroundColor: "#181C1F",
+            color: "#FFFFFF"
           },
+        
         }}
         open
       >

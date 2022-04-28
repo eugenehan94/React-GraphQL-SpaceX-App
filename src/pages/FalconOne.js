@@ -4,10 +4,9 @@ import LeftNav from "../components/LeftNav";
 import { DRAWER_WIDTH } from "../_helper/constant";
 import { Box, Toolbar, CssBaseline, Paper, Typography } from "@mui/material";
 
-import { GetCompanyInfo } from "../components/graphQL/CompInfo";
 const CompanyInfo = () => {
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box>
       <CssBaseline />
       <TopNav />
       <LeftNav />
@@ -21,9 +20,6 @@ const CompanyInfo = () => {
         }}
       >
         <Toolbar />
-        <Paper elevation={4} sx={{ p: 2 }}>
-          <GetCompanyInfo/>
-        </Paper>
       </Box>
     </Box>
   );

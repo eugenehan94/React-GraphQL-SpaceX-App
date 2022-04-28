@@ -25,6 +25,8 @@ const TopNav = () => {
     <AppBar
       position="fixed"
       sx={{
+        backgroundColor: "#181C1F",
+        color: "#FFFFFF",
         width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
         ml: { sm: `${DRAWER_WIDTH}px` },
       }}
