@@ -22,7 +22,7 @@ const Welcome = () => {
         }}
       >
         <Toolbar />
-        <Paper elevation={3} sx={{p: 2}}>
+        {/* <Paper elevation={3} sx={{p: 2, height: "100vh"}}> */}
           <Box>
               <img
                 src={spaceXWallpaper}
@@ -30,7 +30,7 @@ const Welcome = () => {
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
           </Box>
-        </Paper>
+        {/* </Paper> */}
       </Box>
     </Box>
   );

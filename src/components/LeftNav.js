@@ -10,9 +10,8 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material/";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 
+import RocketIcon from '@mui/icons-material/Rocket';
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMobileOpen } from "../redux/actions/topNav";
 
@@ -29,46 +28,47 @@ const LeftNav = (props) => {
   const drawer = (
     <div>
       <Toolbar />
+      
       {/* <Divider /> */}
       <List>
         <ListItem button component={Link} to="/">
             <ListItemIcon>
-              <InboxIcon />
+              < RocketIcon sx={{color: "white"}}/>
             </ListItemIcon>
             <ListItemText primary="Welcome" />
         </ListItem>
         <ListItem button component={Link} to="/companyInfo">
           <ListItemIcon>
-            <InboxIcon />
+            < RocketIcon sx={{color: "white"}}/>
           </ListItemIcon>
           <ListItemText primary="Info"/>
         </ListItem>
         <ListItem button component={Link} to="/falcon1">
           <ListItemIcon>
-            <InboxIcon />
+            < RocketIcon sx={{color: "white"}}/>
           </ListItemIcon>
           <ListItemText primary="Falcon 1"/>
         </ListItem>
         {/* {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index % 2 === 0 ? < RocketIcon /> : <MailIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))} */}
       </List>
-      <Divider />
+      {/* <Divider />
       <List>
         {["All mail", "Trash", "Spam"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index % 2 === 0 ? < RocketIcon /> : <MailIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
   const container =

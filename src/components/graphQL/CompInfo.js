@@ -1,5 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
-import { Chip, Card, CardContent, Grid, Typography } from "@mui/material";
+import { Box, Chip, Card, CardContent, Grid, Typography } from "@mui/material";
+import ElonMusk from "../../images/ElonMusk.jpg";
 const GET_COMPANY_INFO = gql`
   query ExampleQuery {
     company {
@@ -31,7 +32,6 @@ export const GetCompanyInfo = () => {
   if (error) return "Error";
 
   const { company } = data;
-  console.log("data: ", company);
   const {
     ceo,
     coo,
@@ -50,21 +50,43 @@ export const GetCompanyInfo = () => {
   const { address, city, state } = headquarters;
   return (
     <>
-      <Typography gutterBottom>Company Info</Typography>
+      <Typography gutterBottom variant="h2">
+        Company Info
+      </Typography>
       <Grid container>
         <Grid item xs={12}>
-          <Typography gutterBottom>Summary</Typography>
-          <Typography>{summary}</Typography>
+          <Typography variant="h3">Summary</Typography>
+          <Typography variant="body1">{summary}</Typography>
         </Grid>
 
-        <Grid container spacing={3} sx={{mt: 1, mb: 1}}>
+        <Grid container spacing={3} sx={{ mt: 1, mb: 1 }}>
           <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
+            <Box sx={{ width: "100%", position: "relative" }}>
+              <img
+                src={ElonMusk}
+                alt="Elon Musk"
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              />
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  backgroundColor: "black",
+                  height: "100%",
+                  width: "100%",
+
+                }}
+              >
+                <Chip label="CEO" color="primary" />
+                <Typography sx={{ p: 2, color: "white" }}>{ceo}</Typography>
+              </Box>
+              {/* <CardContent
+                sx={{ position: "absolute", top: "80px", right: "15px" }}
+              >
                 <Chip label="CEO" color="primary" />
                 <Typography sx={{ p: 2 }}>{ceo}</Typography>
-              </CardContent>
-            </Card>
+              </CardContent> */}
+            </Box>
           </Grid>
           <Grid item xs={12} md={3}>
             <Card>
@@ -91,7 +113,9 @@ export const GetCompanyInfo = () => {
             </Card>
           </Grid>
         </Grid>
-
+        <Grid item xs={12}>
+          <Typography variant="h3">Other Information</Typography>
+        </Grid>
         <Grid item xs={12}>
           <Typography>Employees</Typography>
           <Typography>{employees}</Typography>

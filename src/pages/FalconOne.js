@@ -4,9 +4,10 @@ import LeftNav from "../components/LeftNav";
 import { DRAWER_WIDTH } from "../_helper/constant";
 import { Box, Toolbar, CssBaseline, Paper, Typography } from "@mui/material";
 
-const CompanyInfo = () => {
+import { GetFalconOneInfo } from "../components/graphQL/FalconOne";
+const FalconOne = () => {
   return (
-    <Box>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <TopNav />
       <LeftNav />
@@ -20,9 +21,12 @@ const CompanyInfo = () => {
         }}
       >
         <Toolbar />
+        <Paper elevation={4} sx={{ p: 2 }}>
+          <GetFalconOneInfo/>
+        </Paper>
       </Box>
     </Box>
   );
 };
 
-export default CompanyInfo;
+export default FalconOne;
