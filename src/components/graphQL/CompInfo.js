@@ -4,6 +4,10 @@ import ElonMusk from "../../images/ElonMusk.jpg";
 import GwynneShotwell from "../../images/GwynneShotwell.jpg";
 import TomMueller from "../../images/TomMueller.jpg";
 import Employees from "../../images/Employees.jpg";
+import SpaceXFactory from "../../images/SpaceXFactory.jpg"
+import SpaceXFactoryTwo from "../../images/SpaceXFactory2.jpg"
+import LaunchSite from "../../images/LaunchSite.jpg"
+import Facilities from "../../images/Facilities.jpg"
 const GET_COMPANY_INFO = gql`
   query ExampleQuery {
     company {
@@ -216,7 +220,7 @@ export const GetCompanyInfo = () => {
           <Typography variant="h3">Other Information</Typography>
         </Grid>
         {/* PUT Individual cards for info below: */}
-        <Grid container spacing={1}>
+        <Grid container>
           <Grid item xs={12} md={3}>
             <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
               <img
@@ -239,36 +243,162 @@ export const GetCompanyInfo = () => {
               <Typography sx={{position: "absolute", top: "60%", left: "25%", color: "white"}}>{employees}</Typography>
             </Box>
           </Grid>
-          <Grid item xs={12}>
-            <Typography>Founded</Typography>
-            <Typography>{founded}</Typography>
+          <Grid item xs={12} md={3}>
+          <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+              <img
+                src={SpaceXFactory}
+                alt="Space X Factory"
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              />
+                 <Box
+                sx={{
+                  position: "absolute",
+                  top: "0",
+                  backgroundColor: "black",
+                  height: "100%",
+                  width: "100%",
+                  opacity: "0.6",
+                  overflow: "hidden",
+                }}
+              ></Box>
+              <Typography sx={{position: "absolute", top: "40%", left: "25%", color: "white"}}>Founded:</Typography>
+              <Typography sx={{position: "absolute", top: "60%", left: "25%", color: "white"}}>{founded}</Typography>
+            </Box>
           </Grid>
-          <Grid item xs={12}>
-            <Typography>Founder</Typography>
-            <Typography>{founder}</Typography>
+          <Grid item xs={12} md={3}>
+          <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+              <img
+                src={ElonMusk}
+                alt="Elon Musk"
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              />
+                 <Box
+                sx={{
+                  position: "absolute",
+                  top: "0",
+                  backgroundColor: "black",
+                  height: "100%",
+                  width: "100%",
+                  opacity: "0.6",
+                  overflow: "hidden",
+                }}
+              ></Box>
+              <Typography sx={{position: "absolute", top: "40%", left: "25%", color: "white"}}>Founder:</Typography>
+              <Typography sx={{position: "absolute", top: "60%", left: "25%", color: "white"}}>{founder}</Typography>
+            </Box>
           </Grid>
-          <Grid item xs={12}>
-            <Typography>Headquarters</Typography>
-            <Typography>{address}</Typography>
-            <Typography>{city}</Typography>
-            <Typography>{state}</Typography>
+          <Grid item xs={12} md={3}>
+          <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+              <img
+                src={SpaceXFactoryTwo}
+                alt="Space X Factory"
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              />
+                 <Box
+                sx={{
+                  position: "absolute",
+                  top: "0",
+                  backgroundColor: "black",
+                  height: "100%",
+                  width: "100%",
+                  opacity: "0.6",
+                  overflow: "hidden",
+                }}
+              ></Box>
+              <Typography sx={{position: "absolute", top: "40%", left: "25%", color: "white"}}>Headquarters:</Typography>
+              <Typography sx={{position: "absolute", top: "50%", left: "25%", color: "white"}}>{address}</Typography>
+              <Typography sx={{position: "absolute", top: "60%", left: "25%", color: "white"}}>{city}</Typography>
+              <Typography sx={{position: "absolute", top: "70%", left: "25%", color: "white"}}>{state}</Typography>  
+            </Box>
           </Grid>
-          <Grid item xs={12}>
-            <Typography>Launch Sites</Typography>
-            <Typography>{launch_sites}</Typography>
+          <Grid item xs={12} md={3}>
+          <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+              <img
+                src={LaunchSite}
+                alt="Launch Site"
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              />
+                 <Box
+                sx={{
+                  position: "absolute",
+                  top: "0",
+                  backgroundColor: "black",
+                  height: "100%",
+                  width: "100%",
+                  opacity: "0.6",
+                  overflow: "hidden",
+                }}
+              ></Box>
+              <Typography sx={{position: "absolute", top: "40%", left: "25%", color: "white"}}>Launch Sites:</Typography>
+              <Typography sx={{position: "absolute", top: "60%", left: "25%", color: "white"}}>{launch_sites}</Typography>
+            </Box>
           </Grid>
 
-          <Grid item xs={12}>
-            <Typography>Test Sites</Typography>
-            <Typography>{test_sites}</Typography>
+          <Grid item xs={12} md={3}>
+          <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+              <img
+                src={Facilities}
+                alt="Facilities"
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              />
+                 <Box
+                sx={{
+                  position: "absolute",
+                  top: "0",
+                  backgroundColor: "black",
+                  height: "100%",
+                  width: "100%",
+                  opacity: "0.6",
+                  overflow: "hidden",
+                }}
+              ></Box>
+              <Typography sx={{position: "absolute", top: "40%", left: "25%", color: "white"}}>Test Sites</Typography>
+              <Typography sx={{position: "absolute", top: "60%", left: "25%", color: "white"}}>{test_sites}</Typography>
+            </Box>
           </Grid>
-          <Grid item xs={12}>
-            <Typography>Valuation</Typography>
-            <Typography>{valuation}</Typography>
+          <Grid item xs={12} md={3}>
+          <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+              <img
+                src={Employees}
+                alt="Employees"
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              />
+                 <Box
+                sx={{
+                  position: "absolute",
+                  top: "0",
+                  backgroundColor: "black",
+                  height: "100%",
+                  width: "100%",
+                  opacity: "0.6",
+                  overflow: "hidden",
+                }}
+              ></Box>
+              <Typography sx={{position: "absolute", top: "40%", left: "25%", color: "white"}}>Valuation:</Typography>
+              <Typography sx={{position: "absolute", top: "60%", left: "25%", color: "white"}}>{valuation}</Typography>
+            </Box>
           </Grid>
-          <Grid item xs={12}>
-            <Typography>Vehicles</Typography>
-            <Typography>{vehicles}</Typography>
+          <Grid item xs={12} md={3}>
+          <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+              <img
+                src={Employees}
+                alt="Employees"
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              />
+                 <Box
+                sx={{
+                  position: "absolute",
+                  top: "0",
+                  backgroundColor: "black",
+                  height: "100%",
+                  width: "100%",
+                  opacity: "0.6",
+                  overflow: "hidden",
+                }}
+              ></Box>
+              <Typography sx={{position: "absolute", top: "40%", left: "25%", color: "white"}}>Vehicles:</Typography>
+              <Typography sx={{position: "absolute", top: "60%", left: "25%", color: "white"}}>{vehicles}</Typography>
+            </Box>
           </Grid>
         </Grid>
       </Grid>
