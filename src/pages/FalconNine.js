@@ -2,10 +2,10 @@ import React from "react";
 import TopNav from "../components/TopNav";
 import LeftNav from "../components/LeftNav";
 import { DRAWER_WIDTH } from "../_helper/constant";
-import { Box, Toolbar, CssBaseline, Paper} from "@mui/material";
+import { Box, Toolbar, CssBaseline, Paper, Typography } from "@mui/material";
 
-import { GetCompanyInfo } from "../components/graphQL/CompInfo";
-const CompanyInfo = () => {
+import { GetFalconNineInfo } from "../components/graphQL/FalconNine";
+const FalconNine = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -22,11 +22,11 @@ const CompanyInfo = () => {
       >
         <Toolbar />
         <Paper elevation={4} sx={{ p: 3 }}>
-          <GetCompanyInfo/>
+          <GetFalconNineInfo/>
         </Paper>
       </Box>
     </Box>
   );
 };
 
-export default CompanyInfo;
+export default FalconNine;

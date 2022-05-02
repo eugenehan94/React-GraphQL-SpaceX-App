@@ -21,7 +21,7 @@ const FalconOne = () => {
         }}
       >
         <Toolbar />
-        <Paper elevation={4} sx={{ p: 2 }}>
+        <Paper elevation={4} sx={{ p: 3 }}>
           <GetFalconOneInfo/>
         </Paper>
       </Box>

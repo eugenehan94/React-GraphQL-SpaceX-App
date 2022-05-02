@@ -31,7 +31,7 @@ const LeftNav = (props) => {
       
       {/* <Divider /> */}
       <List>
-        <ListItem button component={Link} to="/">
+        <ListItem button component={Link} to="/" >
             <ListItemIcon>
               < RocketIcon sx={{color: "white"}}/>
             </ListItemIcon>
@@ -43,11 +43,23 @@ const LeftNav = (props) => {
           </ListItemIcon>
           <ListItemText primary="Info"/>
         </ListItem>
-        <ListItem button component={Link} to="/falcon1">
+        <ListItem button component={Link} to="/falcon1" >
           <ListItemIcon>
             < RocketIcon sx={{color: "white"}}/>
           </ListItemIcon>
           <ListItemText primary="Falcon 1"/>
+        </ListItem>
+        <ListItem button component={Link} to="/falcon9" >
+          <ListItemIcon>
+            < RocketIcon sx={{color: "white"}}/>
+          </ListItemIcon>
+          <ListItemText primary="Falcon 9"/>
+        </ListItem>
+        <ListItem button component={Link} to="/falconHeavy" >
+          <ListItemIcon>
+            < RocketIcon sx={{color: "white"}}/>
+          </ListItemIcon>
+          <ListItemText primary="Falcon Heavy"/>
         </ListItem>
         {/* {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
