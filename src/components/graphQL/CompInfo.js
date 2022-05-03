@@ -69,7 +69,7 @@ export const GetCompanyInfo = () => {
         </Grid>
 
         <Grid container spacing={3} sx={{ mt: 1, mb: 1 }}>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={6} sx={{width: "100%"}}>
             <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
               <img
                 src={ElonMusk}
@@ -90,7 +90,7 @@ export const GetCompanyInfo = () => {
               <Chip
                 label="CEO"
                 color="primary"
-                sx={{ position: "absolute", top: "5px", left: "5px" }}
+                sx={{ position: "absolute", top: "5px", left: "5px", letterSpacing: "3px", fontWeight: "bold" }}
               />
               <Typography
                 variant="h6"
@@ -100,13 +100,14 @@ export const GetCompanyInfo = () => {
                   position: "absolute",
                   left: "0px",
                   top: "30px",
+                  letterSpacing: "2px"
                 }}
               >
                 {ceo}
               </Typography>
             </Box>
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={6} sx={{width: "100%"}}>
             <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
               <img
                 src={GwynneShotwell}
@@ -127,7 +128,7 @@ export const GetCompanyInfo = () => {
               <Chip
                 label="COO"
                 color="primary"
-                sx={{ position: "absolute", top: "5px", left: "5px" }}
+                sx={{ position: "absolute", top: "5px", left: "5px",  letterSpacing: "3px", fontWeight: "bold" }}
               />
               <Typography
                 variant="h6"
@@ -137,13 +138,14 @@ export const GetCompanyInfo = () => {
                   position: "absolute",
                   left: "0px",
                   top: "30px",
+                  letterSpacing: "2px"
                 }}
               >
                 {coo}
               </Typography>
             </Box>
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={6} sx={{width: "100%"}}>
             <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
               <img
                 src={ElonMusk}
@@ -164,7 +166,7 @@ export const GetCompanyInfo = () => {
               <Chip
                 label="CTO"
                 color="primary"
-                sx={{ position: "absolute", top: "5px", left: "5px" }}
+                sx={{ position: "absolute", top: "5px", left: "5px",  letterSpacing: "3px", fontWeight: "bold" }}
               />
               <Typography
                 variant="h6"
@@ -174,13 +176,14 @@ export const GetCompanyInfo = () => {
                   position: "absolute",
                   left: "0px",
                   top: "30px",
+                  letterSpacing: "2px"
                 }}
               >
                 {cto}
               </Typography>
             </Box>
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={6} sx={{width: "100%"}}>
             <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
               <img
                 src={TomMueller}
@@ -201,7 +204,7 @@ export const GetCompanyInfo = () => {
               <Chip
                 label="CTO Propulsion"
                 color="primary"
-                sx={{ position: "absolute", top: "5px", left: "5px" }}
+                sx={{ position: "absolute", top: "5px", left: "5px",  letterSpacing: "3px", fontWeight: "bold" }}
               />
               <Typography
                 variant="h6"
@@ -211,6 +214,7 @@ export const GetCompanyInfo = () => {
                   position: "absolute",
                   left: "0px",
                   top: "30px",
+                  letterSpacing: "2px"
                 }}
               >
                 {cto_propulsion}
@@ -303,7 +307,7 @@ export const GetCompanyInfo = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} md={4} sx={{width: "100%"}}>
             <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
               <img
                 src={ElonMusk}

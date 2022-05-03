@@ -16,7 +16,7 @@ const FalconOne = () => {
         sx={{
           height: "100%",
           flexGrow: 1,
-          p: 3,
+          p: {sm: 1, md: 3 },
           width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
         }}
       >

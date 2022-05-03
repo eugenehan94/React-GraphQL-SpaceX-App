@@ -17,20 +17,19 @@ const Welcome = () => {
         sx={{
           height: "100%",
           flexGrow: 1,
-          p: 3,
+          p: {sm: 0, md: 3 },
           width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
+          height: "100vh",
         }}
       >
         <Toolbar />
-        {/* <Paper elevation={3} sx={{p: 2, height: "100vh"}}> */}
-          <Box>
+          <Box sx={{ height: "100%"}}>
               <img
                 src={spaceXWallpaper}
                 alt="spaceX"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                style={{ width: "100%", height: "100%", objectFit: "fill" }}
               />
           </Box>
-        {/* </Paper> */}
       </Box>
     </Box>
   );

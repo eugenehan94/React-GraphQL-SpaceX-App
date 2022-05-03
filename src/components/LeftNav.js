@@ -4,14 +4,16 @@ import {
   Box,
   Drawer,
   Toolbar,
+  Grid,
   Divider,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material/";
 
-import RocketIcon from '@mui/icons-material/Rocket';
+import RocketIcon from "@mui/icons-material/Rocket";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMobileOpen } from "../redux/actions/topNav";
 
@@ -27,39 +29,59 @@ const LeftNav = (props) => {
   };
   const drawer = (
     <div>
-      <Toolbar />
-      
-      {/* <Divider /> */}
+      {/* <Toolbar/> */}
+
+      <Typography sx={{ ml: "30px", p: "2px", fontSize: "40px", letterSpacing: "5px" }}>SPACE X</Typography>
+
+      <Divider sx={{ backgroundColor: "white" }} />
       <List>
-        <ListItem button component={Link} to="/" >
-            <ListItemIcon>
-              < RocketIcon sx={{color: "white"}}/>
-            </ListItemIcon>
-            <ListItemText primary="Welcome" />
+        <ListItem button component={Link} to="/">
+          <ListItemIcon>
+            <RocketIcon sx={{ color: "white" }} />
+          </ListItemIcon>
+          <ListItemText primary="Welcome" />
         </ListItem>
         <ListItem button component={Link} to="/companyInfo">
           <ListItemIcon>
-            < RocketIcon sx={{color: "white"}}/>
+            <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
-          <ListItemText primary="Info"/>
+          <ListItemText primary="Info" />
         </ListItem>
-        <ListItem button component={Link} to="/falcon1" >
+        <ListItem button component={Link} to="/falcon1">
           <ListItemIcon>
-            < RocketIcon sx={{color: "white"}}/>
+            <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
-          <ListItemText primary="Falcon 1"/>
+          <ListItemText primary="Falcon 1" />
         </ListItem>
-        <ListItem button component={Link} to="/falcon9" >
+        <ListItem button component={Link} to="/falcon9">
           <ListItemIcon>
-            < RocketIcon sx={{color: "white"}}/>
+            <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
-          <ListItemText primary="Falcon 9"/>
+          <ListItemText primary="Falcon 9" />
         </ListItem>
-        <ListItem button component={Link} to="/falconHeavy" >
+        <ListItem button component={Link} to="/falconHeavy">
           <ListItemIcon>
-            < RocketIcon sx={{color: "white"}}/>
+            <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
-          <ListItemText primary="Falcon Heavy"/>
+          <ListItemText primary="Falcon Heavy" />
+        </ListItem>
+        <ListItem button component={Link} to="/starship">
+          <ListItemIcon>
+            <RocketIcon sx={{ color: "white" }} />
+          </ListItemIcon>
+          <ListItemText primary="Starship" />
+        </ListItem>
+        <ListItem button component={Link} to="/dragon1">
+          <ListItemIcon>
+            <RocketIcon sx={{ color: "white" }} />
+          </ListItemIcon>
+          <ListItemText primary="Dragon One" />
+        </ListItem>
+        <ListItem button component={Link} to="/dragon2">
+          <ListItemIcon>
+            <RocketIcon sx={{ color: "white" }} />
+          </ListItemIcon>
+          <ListItemText primary="Dragon Two" />
         </ListItem>
         {/* {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
@@ -106,7 +128,7 @@ const LeftNav = (props) => {
             boxSizing: "border-box",
             width: DRAWER_WIDTH,
             backgroundColor: "#181C1F",
-            color: "#FFFFFF"
+            color: "#FFFFFF",
           },
         }}
       >
@@ -121,9 +143,8 @@ const LeftNav = (props) => {
             boxSizing: "border-box",
             width: DRAWER_WIDTH,
             backgroundColor: "#181C1F",
-            color: "#FFFFFF"
+            color: "#FFFFFF",
           },
-        
         }}
         open
       >

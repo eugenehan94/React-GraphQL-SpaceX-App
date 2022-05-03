@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 const GET_FALCON_ONE_INFO = gql`
   query ExampleQuery {
@@ -50,44 +50,30 @@ export const GetFalconOneInfo = () => {
     stages,
     success_rate_pct,
   } = rocket;
+  console.log("active: ", active)
   return (
     <>
-      <Typography gutterBottom variant="h2">
-        {name}
-      </Typography>
-      <Typography>
-        {active}
-      </Typography>
-      <Typography>
-        {description}
-      </Typography>
-      <Typography >
-        Boosters: {boosters}
-      </Typography>
-      <Typography >
-        Cost per launch: ${cost_per_launch}
-      </Typography>
-      <Typography >
-        Country: {country}
-      </Typography>
-      <Typography >
-        {diameter.meters}
-      </Typography>
-      <Typography >
-        {first_flight}
-      </Typography>
-      <Typography>
-        {height.meters}
-      </Typography>
-      <Typography >
-        {mass.kg}
-      </Typography>
-      <Typography >
-        {stages}
-      </Typography>
-      <Typography>
-        {success_rate_pct}
-      </Typography>
+      <Grid container justifyContent="space-between">
+        <Grid item>
+          <Typography gutterBottom variant="h2">
+            {name}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography>{active}</Typography>
+        </Grid>
+      </Grid>
+
+      <Typography>{description}</Typography>
+      <Typography>Boosters: {boosters}</Typography>
+      <Typography>Cost per launch: ${cost_per_launch}</Typography>
+      <Typography>Country: {country}</Typography>
+      <Typography>{diameter.meters}</Typography>
+      <Typography>{first_flight}</Typography>
+      <Typography>{height.meters}</Typography>
+      <Typography>{mass.kg}</Typography>
+      <Typography>{stages}</Typography>
+      <Typography>{success_rate_pct}</Typography>
     </>
   );
 };
