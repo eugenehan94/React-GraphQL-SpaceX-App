@@ -1,5 +1,16 @@
 import { gql, useQuery } from "@apollo/client";
-import { Grid, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Box,
+  Chip,
+  Grid,
+  Typography,
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+import DarkSkyWithStars from "../../images/DarkSkyWithStars.jpg";
 
 const GET_FALCON_ONE_INFO = gql`
   query ExampleQuery {
@@ -7,6 +18,7 @@ const GET_FALCON_ONE_INFO = gql`
       name
       mass {
         kg
+        lb
       }
       id
       active
@@ -16,10 +28,12 @@ const GET_FALCON_ONE_INFO = gql`
       description
       diameter {
         meters
+        feet
       }
       first_flight
       height {
         meters
+        feet
       }
       stages
       success_rate_pct
@@ -50,30 +64,197 @@ export const GetFalconOneInfo = () => {
     stages,
     success_rate_pct,
   } = rocket;
-  console.log("active: ", active)
+  console.log("active: ", active);
   return (
     <>
       <Grid container justifyContent="space-between">
         <Grid item>
-          <Typography gutterBottom variant="h2">
-            {name}
-          </Typography>
+          <Typography variant="h2">{name}</Typography>
         </Grid>
         <Grid item>
-          <Typography>{active}</Typography>
+          {active ? (
+            <Chip
+              label="Active"
+              color="success"
+              size="medium"
+              sx={{ mt: 2, mb: 2 }}
+            />
+          ) : (
+            <Chip
+              label="Inactive"
+              color="error"
+              size="medium"
+              sx={{ mt: 2, mb: 2 }}
+            />
+          )}
         </Grid>
       </Grid>
 
-      <Typography>{description}</Typography>
-      <Typography>Boosters: {boosters}</Typography>
-      <Typography>Cost per launch: ${cost_per_launch}</Typography>
-      <Typography>Country: {country}</Typography>
-      <Typography>{diameter.meters}</Typography>
-      <Typography>{first_flight}</Typography>
-      <Typography>{height.meters}</Typography>
-      <Typography>{mass.kg}</Typography>
-      <Typography>{stages}</Typography>
-      <Typography>{success_rate_pct}</Typography>
+      <Typography sx={{ mb: 5 }}>{description}</Typography>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>First Flight Date</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {first_flight}
+            </Typography>
+          </Box>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography>Number of Boosters</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {boosters}
+            </Typography>
+          </Box>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3a-content"
+          id="panel3a-header"
+        >
+          <Typography>Cost per launch</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography> ${cost_per_launch}</Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel4a-content"
+          id="panel4a-header"
+        >
+          <Typography>Country</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography> {country}</Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel5a-content"
+          id="panel5a-header"
+        >
+          <Typography>Diameter</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography> {diameter.meters} m</Typography>
+          <Typography> {diameter.feet} ft</Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel6a-content"
+          id="panel6a-header"
+        >
+          <Typography>Height</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>{height.meters} m</Typography>
+          <Typography>{height.feet} ft</Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel7a-content"
+          id="panel7a-header"
+        >
+          <Typography>Mass</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>{mass.kg} kg</Typography>
+          <Typography>{mass.lb} lb</Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel9a-content"
+          id="panel9a-header"
+        >
+          <Typography>Stages</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>{stages}</Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel10a-content"
+          id="panel10a-header"
+        >
+          <Typography>Success Rate</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>{success_rate_pct}</Typography>
+        </AccordionDetails>
+      </Accordion>
     </>
   );
 };
