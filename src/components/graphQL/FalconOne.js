@@ -49,7 +49,6 @@ export const GetFalconOneInfo = () => {
   if (loading) return <></>;
   if (error) return "Error";
   const { rocket } = data;
-  console.log("rocket: ", rocket);
   const {
     active,
     boosters,
@@ -90,7 +89,7 @@ export const GetFalconOneInfo = () => {
         </Grid>
       </Grid>
 
-      <Typography sx={{ mb: 5 }}>{description}</Typography>
+      <Typography  sx={{ mb: 5 }}>{description}</Typography>
 
       <Accordion>
         <AccordionSummary
@@ -171,7 +170,30 @@ export const GetFalconOneInfo = () => {
           <Typography>Cost per launch</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography> ${cost_per_launch}</Typography>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {" "}
+              ${cost_per_launch}
+            </Typography>
+          </Box>
         </AccordionDetails>
       </Accordion>
 
@@ -184,7 +206,29 @@ export const GetFalconOneInfo = () => {
           <Typography>Country</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography> {country}</Typography>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {country}
+            </Typography>
+          </Box>
         </AccordionDetails>
       </Accordion>
 
@@ -197,8 +241,39 @@ export const GetFalconOneInfo = () => {
           <Typography>Diameter</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography> {diameter.meters} m</Typography>
-          <Typography> {diameter.feet} ft</Typography>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {diameter.meters} m
+            </Typography>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "30px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {diameter.feet} ft
+            </Typography>
+          </Box>
         </AccordionDetails>
       </Accordion>
 
@@ -211,8 +286,39 @@ export const GetFalconOneInfo = () => {
           <Typography>Height</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{height.meters} m</Typography>
-          <Typography>{height.feet} ft</Typography>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {height.meters} m
+            </Typography>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "30px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {height.feet} ft
+            </Typography>
+          </Box>
         </AccordionDetails>
       </Accordion>
 
@@ -225,8 +331,39 @@ export const GetFalconOneInfo = () => {
           <Typography>Mass</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{mass.kg} kg</Typography>
-          <Typography>{mass.lb} lb</Typography>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {mass.kg} kg
+            </Typography>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "30px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {mass.lb} lb
+            </Typography>
+          </Box>
         </AccordionDetails>
       </Accordion>
 
@@ -239,7 +376,29 @@ export const GetFalconOneInfo = () => {
           <Typography>Stages</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{stages}</Typography>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {stages}
+            </Typography>
+          </Box>
         </AccordionDetails>
       </Accordion>
 
@@ -252,7 +411,29 @@ export const GetFalconOneInfo = () => {
           <Typography>Success Rate</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{success_rate_pct}</Typography>
+          <Box sx={{ position: "relative" }}>
+            <img
+              src={DarkSkyWithStars}
+              alt="Dark Sky With Stars"
+              style={{
+                width: "100%",
+                height: "100px",
+                objectFit: "cover",
+                margin: 0,
+                padding: 0,
+              }}
+            />
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "white",
+              }}
+            >
+              {success_rate_pct}
+            </Typography>
+          </Box>
         </AccordionDetails>
       </Accordion>
     </>
