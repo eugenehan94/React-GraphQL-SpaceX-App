@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import {
-  Button,
+  Backdrop,
+  Box,
   Chip,
-  Dialog,
-  DialogContent,
-  DialogTitle,
+  Fade,
   Grid,
+  Modal,
   Typography,
 } from "@mui/material";
+
+import FalconNineOne from "../../images/Falcon9One.jpg";
 const GET_FALCON_NINE_INFO = gql`
   query ExampleQuery {
     rocket(id: "falcon9") {
       active
       boosters
-      company
       cost_per_launch
       country
       description
@@ -22,51 +23,46 @@ const GET_FALCON_NINE_INFO = gql`
       name
       stages
       success_rate_pct
-      type
       first_flight
     }
   }
 `;
-const emails = ["username@gmail.com", "user02@gmail.com"];
 
-function SimpleDialog(props) {
-  const { onClose, selectedValue, open } = props;
-
-  const handleClose = () => {
-    onClose(selectedValue);
-  };
-
-  const handleListItemClick = (value) => {
-    onClose(value);
-  };
-
-  return (
-    <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>Set backup account</DialogTitle>
-    </Dialog>
-  );
-}
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 export const GetFalconNineInfo = () => {
   const { loading, error, data } = useQuery(GET_FALCON_NINE_INFO);
+  const [modalOne, setModalOne] = useState(false);
+  const handleModalOneOpen = () => setModalOne(true);
+  const handleModalOneClose = () => setModalOne(false);
 
-  const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState(emails[1]);
+  const [modalTwo, setModalTwo] = useState(false);
+  const handleModalTwoOpen = () => setModalTwo(true);
+  const handleModalTwoClose = () => setModalTwo(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  const [modalThree, setModalThree] = useState(false);
+  const handleModalThreeOpen = () => setModalThree(true);
+  const handleModalThreeClose = () => setModalThree(false);
 
-  const handleClose = (value) => {
-    setOpen(false);
-    setSelectedValue(value);
-  };
+  const [modalFour, setModalFour] = useState(false);
+  const handleModalFourOpen = () => setModalFour(true);
+  const handleModalFourClose = () => setModalFour(false);
 
   if (loading) return <></>;
   if (error) return "Error";
   const { rocket } = data;
   console.log(rocket);
-  const { active, name, description } = rocket;
+  const { active, name, description, boosters, cost_per_launch, country, stages } = rocket;
 
   return (
     <>
@@ -95,18 +91,384 @@ export const GetFalconNineInfo = () => {
 
       <Typography sx={{ mb: 5 }}>{description}</Typography>
 
-      <Grid container>
-        <Grid item>
-          <div>
-            <Button variant="outlined" onClick={handleClickOpen}>
-              Open simple dialog
-            </Button>
-            <SimpleDialog
-              selectedValue={selectedValue}
-              open={open}
-              onClose={handleClose}
+      <Grid container spacing={1}>
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              border: "1px solid black",
+              height: "100%",
+              position: "relative",
+            }}
+            onClick={handleModalOneOpen}
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                height: "100%",
+                width: "100%",
+                backgroundColor: "black",
+                opacity: 0.5,
+              }}
+            ></Box>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                color: "white",
+                transform: "translate(-50%,0)",
+              }}
+            >
+              Boosters
+            </Typography>
+            <img
+              src={FalconNineOne}
+              alt="Falcon 9 before launch"
+              style={{ objectFit: "cover", height: "100%", width: "100%" }}
             />
-          </div>
+          </Box>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={modalOne}
+            onClose={handleModalOneClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={modalOne}>
+              <Box sx={style}>
+                <Typography
+                  id="transition-modal-title"
+                  variant="h6"
+                  component="h2"
+                >
+                  Boosters:
+                </Typography>
+                <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                  {boosters}
+                </Typography>
+              </Box>
+            </Fade>
+          </Modal>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              border: "1px solid black",
+              height: "100%",
+              position: "relative",
+            }}
+            onClick={handleModalTwoOpen}
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                height: "100%",
+                width: "100%",
+                backgroundColor: "black",
+                opacity: 0.5,
+              }}
+            ></Box>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                color: "white",
+                transform: "translate(-50%,0)",
+              }}
+            >
+              Cost Per Launch
+            </Typography>
+            <img
+              src={FalconNineOne}
+              alt="Falcon 9 before launch"
+              style={{ objectFit: "cover", height: "100%", width: "100%" }}
+            />
+          </Box>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={modalTwo}
+            onClose={handleModalTwoClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={modalTwo}>
+              <Box sx={style}>
+                <Typography
+                  id="transition-modal-title"
+                  variant="h6"
+                  component="h2"
+                >
+                 Cost Per Launch
+                </Typography>
+                <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                  {cost_per_launch}
+                </Typography>
+              </Box>
+            </Fade>
+          </Modal>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              border: "1px solid black",
+              height: "100%",
+              position: "relative",
+            }}
+            onClick={handleModalThreeOpen}
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                height: "100%",
+                width: "100%",
+                backgroundColor: "black",
+                opacity: 0.5,
+              }}
+            ></Box>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                color: "white",
+                transform: "translate(-50%,0)",
+              }}
+            >
+              Country
+            </Typography>
+            <img
+              src={FalconNineOne}
+              alt="Falcon 9 before launch"
+              style={{ objectFit: "cover", height: "100%", width: "100%" }}
+            />
+          </Box>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={modalThree}
+            onClose={handleModalThreeClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={modalThree}>
+              <Box sx={style}>
+                <Typography
+                  id="transition-modal-title"
+                  variant="h6"
+                  component="h2"
+                >
+                 Country
+                </Typography>
+                <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                  {country}
+                </Typography>
+              </Box>
+            </Fade>
+          </Modal>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              border: "1px solid black",
+              height: "100%",
+              position: "relative",
+            }}
+            onClick={handleModalFourOpen}
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                height: "100%",
+                width: "100%",
+                backgroundColor: "black",
+                opacity: 0.5,
+              }}
+            ></Box>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                color: "white",
+                transform: "translate(-50%,0)",
+              }}
+            >
+              Stages
+            </Typography>
+            <img
+              src={FalconNineOne}
+              alt="Falcon 9 before launch"
+              style={{ objectFit: "cover", height: "100%", width: "100%" }}
+            />
+          </Box>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={modalFour}
+            onClose={handleModalFourClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={modalFour}>
+              <Box sx={style}>
+                <Typography
+                  id="transition-modal-title"
+                  variant="h6"
+                  component="h2"
+                >
+                 Stages
+                </Typography>
+                <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                  {stages}
+                </Typography>
+              </Box>
+            </Fade>
+          </Modal>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              border: "1px solid black",
+              height: "100%",
+              position: "relative",
+            }}
+            onClick={handleModalFiveOpen}
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                height: "100%",
+                width: "100%",
+                backgroundColor: "black",
+                opacity: 0.5,
+              }}
+            ></Box>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                color: "white",
+                transform: "translate(-50%,0)",
+              }}
+            >
+              Success Rate
+            </Typography>
+            <img
+              src={FalconNineOne}
+              alt="Falcon 9 before launch"
+              style={{ objectFit: "cover", height: "100%", width: "100%" }}
+            />
+          </Box>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={modalFive}
+            onClose={handleModalFiveClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={modalFive}>
+              <Box sx={style}>
+                <Typography
+                  id="transition-modal-title"
+                  variant="h6"
+                  component="h2"
+                >
+                 Stages
+                </Typography>
+                <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                  {stages}
+                </Typography>
+              </Box>
+            </Fade>
+          </Modal>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              border: "1px solid black",
+              height: "100%",
+              position: "relative",
+            }}
+            onClick={handleModalSixOpen}
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                height: "100%",
+                width: "100%",
+                backgroundColor: "black",
+                opacity: 0.5,
+              }}
+            ></Box>
+            <Typography
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                color: "white",
+                transform: "translate(-50%,0)",
+              }}
+            >
+              First Flight
+            </Typography>
+            <img
+              src={FalconNineOne}
+              alt="Falcon 9 before launch"
+              style={{ objectFit: "cover", height: "100%", width: "100%" }}
+            />
+          </Box>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={modalSix}
+            onClose={handleModalSixClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={modalSix}>
+              <Box sx={style}>
+                <Typography
+                  id="transition-modal-title"
+                  variant="h6"
+                  component="h2"
+                >
+                 Stages
+                </Typography>
+                <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                  {stages}
+                </Typography>
+              </Box>
+            </Fade>
+          </Modal>
         </Grid>
       </Grid>
     </>
