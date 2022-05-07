@@ -121,6 +121,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
+              cursor: "pointer"
             }}
             onClick={handleModalOneOpen}
           >
@@ -184,6 +185,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
+              cursor: "pointer",
             }}
             onClick={handleModalTwoOpen}
           >
@@ -235,7 +237,7 @@ export const GetFalconNineInfo = () => {
                   Cost Per Launch
                 </Typography>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                  {cost_per_launch}
+                  ${cost_per_launch}
                 </Typography>
               </Box>
             </Fade>
@@ -247,6 +249,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
+              cursor: "pointer"
             }}
             onClick={handleModalThreeOpen}
           >
@@ -310,6 +313,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
+              cursor: "pointer"
             }}
             onClick={handleModalFourOpen}
           >
@@ -373,6 +377,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
+              cursor: "pointer"
             }}
             onClick={handleModalFiveOpen}
           >
@@ -436,6 +441,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
+              cursor: "pointer"
             }}
             onClick={handleModalSixOpen}
           >
