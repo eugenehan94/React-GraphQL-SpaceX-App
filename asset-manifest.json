@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-GraphQL-SpaceX-App/static/css/main.31d6cfe0.css",
-    "main.js": "/React-GraphQL-SpaceX-App/static/js/main.2e4c21b5.js",
+    "main.js": "/React-GraphQL-SpaceX-App/static/js/main.8411f172.js",
     "static/js/787.f4cc195c.chunk.js": "/React-GraphQL-SpaceX-App/static/js/787.f4cc195c.chunk.js",
     "static/media/Facilities.jpg": "/React-GraphQL-SpaceX-App/static/media/Facilities.d2e408d3c4177ec5108d.jpg",
     "static/media/Falcon9Five.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Five.71d3414b59db8e959378.jpg",
@@ -21,11 +21,11 @@
     "static/media/TomMueller.jpg": "/React-GraphQL-SpaceX-App/static/media/TomMueller.04f9098927a21c6e6617.jpg",
     "static/media/SpaceXFactory.jpg": "/React-GraphQL-SpaceX-App/static/media/SpaceXFactory.e75e7b313a2736f04708.jpg",
     "index.html": "/React-GraphQL-SpaceX-App/index.html",
-    "main.2e4c21b5.js.map": "/React-GraphQL-SpaceX-App/static/js/main.2e4c21b5.js.map",
+    "main.8411f172.js.map": "/React-GraphQL-SpaceX-App/static/js/main.8411f172.js.map",
     "787.f4cc195c.chunk.js.map": "/React-GraphQL-SpaceX-App/static/js/787.f4cc195c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.2e4c21b5.js"
+    "static/js/main.8411f172.js"
   ]
 }
