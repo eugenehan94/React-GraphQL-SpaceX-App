@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/React-GraphQL-SpaceX-App/static/css/main.31d6cfe0.css",
+    "main.js": "/React-GraphQL-SpaceX-App/static/js/main.2e4c21b5.js",
+    "static/js/787.f4cc195c.chunk.js": "/React-GraphQL-SpaceX-App/static/js/787.f4cc195c.chunk.js",
+    "static/media/Facilities.jpg": "/React-GraphQL-SpaceX-App/static/media/Facilities.d2e408d3c4177ec5108d.jpg",
+    "static/media/Falcon9Five.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Five.71d3414b59db8e959378.jpg",
+    "static/media/Employees.jpg": "/React-GraphQL-SpaceX-App/static/media/Employees.632bf3c3d86f141b270c.jpg",
+    "static/media/Falcon9Six.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Six.d50cdc7b0dddc0ae5218.jpg",
+    "static/media/Falcon9Three.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Three.c81333c5bfe8eba8764d.jpg",
+    "static/media/LaunchSite.jpg": "/React-GraphQL-SpaceX-App/static/media/LaunchSite.22f17057d722c968c217.jpg",
+    "static/media/ElonMusk.jpg": "/React-GraphQL-SpaceX-App/static/media/ElonMusk.e3f0438eb4b095c5d026.jpg",
+    "static/media/Valuation.jpg": "/React-GraphQL-SpaceX-App/static/media/Valuation.a47106e9efde433abd65.jpg",
+    "static/media/Falcon9Two.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Two.e30b2e1d2a292b4913a0.jpg",
+    "static/media/Falcon9One.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9One.4b3e0b4e7afcfad2c000.jpg",
+    "static/media/DarkSkyWithStars.jpg": "/React-GraphQL-SpaceX-App/static/media/DarkSkyWithStars.b9f65b70ee5b0049fe8c.jpg",
+    "static/media/GwynneShotwell.jpg": "/React-GraphQL-SpaceX-App/static/media/GwynneShotwell.caee8901c843d3f19925.jpg",
+    "static/media/spaceXWallpaper.jpg": "/React-GraphQL-SpaceX-App/static/media/spaceXWallpaper.707b198b5b1773c95960.jpg",
+    "static/media/SpaceXFactory2.jpg": "/React-GraphQL-SpaceX-App/static/media/SpaceXFactory2.97942c82341d93390f8e.jpg",
+    "static/media/Falcon9Four.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Four.fadc9eca02d7fa7b9b90.jpg",
+    "static/media/TomMueller.jpg": "/React-GraphQL-SpaceX-App/static/media/TomMueller.04f9098927a21c6e6617.jpg",
+    "static/media/SpaceXFactory.jpg": "/React-GraphQL-SpaceX-App/static/media/SpaceXFactory.e75e7b313a2736f04708.jpg",
+    "index.html": "/React-GraphQL-SpaceX-App/index.html",
+    "main.2e4c21b5.js.map": "/React-GraphQL-SpaceX-App/static/js/main.2e4c21b5.js.map",
+    "787.f4cc195c.chunk.js.map": "/React-GraphQL-SpaceX-App/static/js/787.f4cc195c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.2e4c21b5.js"
+  ]
+}
