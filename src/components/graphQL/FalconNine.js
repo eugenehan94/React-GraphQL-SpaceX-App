@@ -11,6 +11,11 @@ import {
 } from "@mui/material";
 
 import FalconNineOne from "../../images/Falcon9One.jpg";
+import FalconNineTwo from "../../images/Falcon9Two.jpg";
+import FalconNineThree from "../../images/Falcon9Three.jpg";
+import FalconNineFour from "../../images/Falcon9Four.jpg";
+import FalconNineFive from "../../images/Falcon9Five.jpg";
+import FalconNineSix from "../../images/Falcon9Six.jpg";
 const GET_FALCON_NINE_INFO = gql`
   query ExampleQuery {
     rocket(id: "falcon9") {
@@ -58,11 +63,29 @@ export const GetFalconNineInfo = () => {
   const handleModalFourOpen = () => setModalFour(true);
   const handleModalFourClose = () => setModalFour(false);
 
+  const [modalFive, setModalFive] = useState(false);
+  const handleModalFiveOpen = () => setModalFive(true);
+  const handleModalFiveClose = () => setModalFive(false);
+
+  const [modalSix, setModalSix] = useState(false);
+  const handleModalSixOpen = () => setModalSix(true);
+  const handleModalSixClose = () => setModalSix(false);
+
   if (loading) return <></>;
   if (error) return "Error";
   const { rocket } = data;
   console.log(rocket);
-  const { active, name, description, boosters, cost_per_launch, country, stages } = rocket;
+  const {
+    active,
+    name,
+    description,
+    boosters,
+    cost_per_launch,
+    country,
+    stages,
+    success_rate_pct,
+    first_flight,
+  } = rocket;
 
   return (
     <>
@@ -186,7 +209,7 @@ export const GetFalconNineInfo = () => {
               Cost Per Launch
             </Typography>
             <img
-              src={FalconNineOne}
+              src={FalconNineTwo}
               alt="Falcon 9 before launch"
               style={{ objectFit: "cover", height: "100%", width: "100%" }}
             />
@@ -209,7 +232,7 @@ export const GetFalconNineInfo = () => {
                   variant="h6"
                   component="h2"
                 >
-                 Cost Per Launch
+                  Cost Per Launch
                 </Typography>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
                   {cost_per_launch}
@@ -249,7 +272,7 @@ export const GetFalconNineInfo = () => {
               Country
             </Typography>
             <img
-              src={FalconNineOne}
+              src={FalconNineThree}
               alt="Falcon 9 before launch"
               style={{ objectFit: "cover", height: "100%", width: "100%" }}
             />
@@ -272,7 +295,7 @@ export const GetFalconNineInfo = () => {
                   variant="h6"
                   component="h2"
                 >
-                 Country
+                  Country
                 </Typography>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
                   {country}
@@ -312,7 +335,7 @@ export const GetFalconNineInfo = () => {
               Stages
             </Typography>
             <img
-              src={FalconNineOne}
+              src={FalconNineFour}
               alt="Falcon 9 before launch"
               style={{ objectFit: "cover", height: "100%", width: "100%" }}
             />
@@ -335,7 +358,7 @@ export const GetFalconNineInfo = () => {
                   variant="h6"
                   component="h2"
                 >
-                 Stages
+                  Stages
                 </Typography>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
                   {stages}
@@ -375,7 +398,7 @@ export const GetFalconNineInfo = () => {
               Success Rate
             </Typography>
             <img
-              src={FalconNineOne}
+              src={FalconNineFive}
               alt="Falcon 9 before launch"
               style={{ objectFit: "cover", height: "100%", width: "100%" }}
             />
@@ -398,10 +421,10 @@ export const GetFalconNineInfo = () => {
                   variant="h6"
                   component="h2"
                 >
-                 Stages
+                  Success Rate
                 </Typography>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                  {stages}
+                  {success_rate_pct}%
                 </Typography>
               </Box>
             </Fade>
@@ -438,7 +461,7 @@ export const GetFalconNineInfo = () => {
               First Flight
             </Typography>
             <img
-              src={FalconNineOne}
+              src={FalconNineSix}
               alt="Falcon 9 before launch"
               style={{ objectFit: "cover", height: "100%", width: "100%" }}
             />
@@ -461,10 +484,10 @@ export const GetFalconNineInfo = () => {
                   variant="h6"
                   component="h2"
                 >
-                 Stages
+                  First Flight
                 </Typography>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                  {stages}
+                  {first_flight}
                 </Typography>
               </Box>
             </Fade>
