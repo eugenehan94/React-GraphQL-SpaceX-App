@@ -248,8 +248,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "40%",
-                  left: "25%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -258,8 +259,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "50%",
-                  left: "25%",
+                  top: "60%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -288,8 +290,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "40%",
-                  left: "25%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -298,8 +301,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "50%",
-                  left: "25%",
+                  top: "60%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -328,8 +332,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "40%",
-                  left: "25%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -338,8 +343,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "50%",
-                  left: "25%",
+                  top: "60%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -368,8 +374,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "40%",
-                  left: "25%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -378,8 +385,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "50%",
-                  left: "25%",
+                  top: "60%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -388,8 +396,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "60%",
-                  left: "25%",
+                  top: "70%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -398,8 +407,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "70%",
-                  left: "25%",
+                  top: "80%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -428,8 +438,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "40%",
-                  left: "25%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -438,8 +449,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "50%",
-                  left: "25%",
+                  top: "60%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -469,18 +481,20 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "40%",
-                  left: "25%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
-                Test Sites
+                Test Sites:
               </Typography>
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "50%",
-                  left: "25%",
+                  top: "60%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -509,8 +523,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "40%",
-                  left: "25%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -519,8 +534,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "50%",
-                  left: "25%",
+                  top: "60%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -549,8 +565,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "40%",
-                  left: "25%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >
@@ -559,8 +576,9 @@ export const GetCompanyInfo = () => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: "50%",
-                  left: "25%",
+                  top: "60%",
+                  left: "50%",
+                  transform: "translate(-50%,0)",
                   color: "white",
                 }}
               >

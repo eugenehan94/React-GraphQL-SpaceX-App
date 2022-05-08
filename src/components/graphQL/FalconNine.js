@@ -74,7 +74,6 @@ export const GetFalconNineInfo = () => {
   if (loading) return <></>;
   if (error) return "Error";
   const { rocket } = data;
-  console.log(rocket);
   const {
     active,
     name,
