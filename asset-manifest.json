@@ -1,14 +1,16 @@
 {
   "files": {
     "main.css": "/React-GraphQL-SpaceX-App/static/css/main.31d6cfe0.css",
-    "main.js": "/React-GraphQL-SpaceX-App/static/js/main.97e643fa.js",
+    "main.js": "/React-GraphQL-SpaceX-App/static/js/main.5bf8b799.js",
     "static/js/787.f4cc195c.chunk.js": "/React-GraphQL-SpaceX-App/static/js/787.f4cc195c.chunk.js",
     "static/media/Facilities.jpg": "/React-GraphQL-SpaceX-App/static/media/Facilities.d2e408d3c4177ec5108d.jpg",
     "static/media/Falcon9Five.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Five.71d3414b59db8e959378.jpg",
     "static/media/FalconHeavyHero.jpg": "/React-GraphQL-SpaceX-App/static/media/FalconHeavyHero.7e743399dae207084aaf.jpg",
+    "static/media/Dragon2Two.jpg": "/React-GraphQL-SpaceX-App/static/media/Dragon2Two.4bfea32e2c5cfd1bc726.jpg",
     "static/media/FalconHeavyEight.jpg": "/React-GraphQL-SpaceX-App/static/media/FalconHeavyEight.a659b86e8a5e3cdc6113.jpg",
     "static/media/Employees.jpg": "/React-GraphQL-SpaceX-App/static/media/Employees.632bf3c3d86f141b270c.jpg",
     "static/media/Falcon9Six.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Six.d50cdc7b0dddc0ae5218.jpg",
+    "static/media/Dragon2Six.jpg": "/React-GraphQL-SpaceX-App/static/media/Dragon2Six.6064fbc6e0f4494cf673.jpg",
     "static/media/FalconHeavySeven.jpg": "/React-GraphQL-SpaceX-App/static/media/FalconHeavySeven.81a403f58db1c57b9074.jpg",
     "static/media/Falcon9Three.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Three.c81333c5bfe8eba8764d.jpg",
     "static/media/FalconHeavyTwo.jpg": "/React-GraphQL-SpaceX-App/static/media/FalconHeavyTwo.b08472cffe18f91795b9.jpg",
@@ -23,17 +25,20 @@
     "static/media/DarkSkyWithStars.jpg": "/React-GraphQL-SpaceX-App/static/media/DarkSkyWithStars.b9f65b70ee5b0049fe8c.jpg",
     "static/media/GwynneShotwell.jpg": "/React-GraphQL-SpaceX-App/static/media/GwynneShotwell.caee8901c843d3f19925.jpg",
     "static/media/spaceXWallpaper.jpg": "/React-GraphQL-SpaceX-App/static/media/spaceXWallpaper.707b198b5b1773c95960.jpg",
+    "static/media/Dragon2Three.jpg": "/React-GraphQL-SpaceX-App/static/media/Dragon2Three.a91665d7843816ad84ce.jpg",
     "static/media/SpaceXFactory2.jpg": "/React-GraphQL-SpaceX-App/static/media/SpaceXFactory2.97942c82341d93390f8e.jpg",
+    "static/media/Dragon2One.jpg": "/React-GraphQL-SpaceX-App/static/media/Dragon2One.aeace7d4b23ee9f8bba8.jpg",
     "static/media/Falcon9Four.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Four.fadc9eca02d7fa7b9b90.jpg",
     "static/media/TomMueller.jpg": "/React-GraphQL-SpaceX-App/static/media/TomMueller.04f9098927a21c6e6617.jpg",
     "static/media/SpaceXFactory.jpg": "/React-GraphQL-SpaceX-App/static/media/SpaceXFactory.e75e7b313a2736f04708.jpg",
+    "static/media/Dragon2Four.jpg": "/React-GraphQL-SpaceX-App/static/media/Dragon2Four.32507c62399413a05c1a.jpg",
     "static/media/FalconHeavyFour.jpg": "/React-GraphQL-SpaceX-App/static/media/FalconHeavyFour.b14a1e4cf79e858b3034.jpg",
     "index.html": "/React-GraphQL-SpaceX-App/index.html",
-    "main.97e643fa.js.map": "/React-GraphQL-SpaceX-App/static/js/main.97e643fa.js.map",
+    "main.5bf8b799.js.map": "/React-GraphQL-SpaceX-App/static/js/main.5bf8b799.js.map",
     "787.f4cc195c.chunk.js.map": "/React-GraphQL-SpaceX-App/static/js/787.f4cc195c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.97e643fa.js"
+    "static/js/main.5bf8b799.js"
   ]
 }
