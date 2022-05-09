@@ -4,6 +4,10 @@ import RocketIcon from "@mui/icons-material/Rocket";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import SatelliteAltIcon from "@mui/icons-material/SatelliteAlt";
 import GradeIcon from "@mui/icons-material/Grade";
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import CircleIcon from '@mui/icons-material/Circle';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import HeightIcon from '@mui/icons-material/Height';
 const GET_STARSHIP_INFO = gql`
   query ExampleQuery {
     rocket(id: "starship") {
@@ -14,11 +18,19 @@ const GET_STARSHIP_INFO = gql`
       cost_per_launch
       first_flight
       stages
+      success_rate_pct
+      diameter {
+        meters
+      }
+      mass {
+        kg
+      }
+      height {
+        meters
+      }
     }
   }
 `;
-
-//https://mobirise.com/extensions/organicamp/demo3.html
 
 export const GetStarshipInfo = () => {
   const { loading, error, data } = useQuery(GET_STARSHIP_INFO);
@@ -35,6 +47,10 @@ export const GetStarshipInfo = () => {
     cost_per_launch,
     first_flight,
     stages,
+    success_rate_pct,
+    diameter,
+    mass,
+    height
   } = rocket;
 
   return (
@@ -188,6 +204,130 @@ export const GetStarshipInfo = () => {
             Stages
           </Typography>
           <Typography sx={{ color: "white" }}>{stages}</Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            alignContent: "center",
+            backgroundColor: "#e4b476",
+            p: 5,
+          }}
+        >
+          <CheckBoxIcon
+            sx={{
+              mb: 3,
+              color: "white",
+              fontSize: "5rem",
+              "&:hover": { transform: "scale(1.2)", transition: "0.3s" },
+              transition: "0.3s",
+            }}
+          />
+          <Typography
+            align="center"
+            sx={{ color: "white", fontWeight: "bold", fontSize: "1.5rem" }}
+          >
+            Success Rate:
+          </Typography>
+          <Typography sx={{ color: "white" }}>{success_rate_pct}</Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            alignContent: "center",
+            backgroundColor: "#f69dad",
+            p: 5,
+          }}
+        >
+          <CircleIcon
+            sx={{
+              mb: 3,
+              color: "white",
+              fontSize: "5rem",
+              "&:hover": { transform: "scale(1.2)", transition: "0.3s" },
+              transition: "0.3s",
+            }}
+          />
+          <Typography
+            align="center"
+            sx={{ color: "white", fontWeight: "bold", fontSize: "1.5rem" }}
+          >
+            Diameter
+          </Typography>
+          <Typography sx={{ color: "white" }}>{diameter.meters} m</Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            alignContent: "center",
+            backgroundColor: "#91ac41",
+            p: 5,
+          }}
+        >
+          <FitnessCenterIcon
+            sx={{
+              mb: 3,
+              color: "white",
+              fontSize: "5rem",
+              "&:hover": { transform: "scale(1.2)", transition: "0.3s" },
+              transition: "0.3s",
+            }}
+          />
+          <Typography
+            align="center"
+            sx={{ color: "white", fontWeight: "bold", fontSize: "1.5rem" }}
+          >
+            Mass
+          </Typography>
+          <Typography sx={{ color: "white" }}>{mass.kg} kg</Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            alignContent: "center",
+            backgroundColor: "#5acda6",
+            p: 5,
+          }}
+        >
+          <HeightIcon
+            sx={{
+              mb: 3,
+              color: "white",
+              fontSize: "5rem",
+              "&:hover": { transform: "scale(1.2)", transition: "0.3s" },
+              transition: "0.3s",
+            }}
+          />
+          <Typography
+            align="center"
+            sx={{ color: "white", fontWeight: "bold", fontSize: "1.5rem" }}
+          >
+            Height
+          </Typography>
+          <Typography sx={{ color: "white" }}>{height.meters} m</Typography>
         </Grid>
       </Grid>
     </>
