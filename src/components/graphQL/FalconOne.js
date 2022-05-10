@@ -1,4 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
+
+import { Loading } from "../Loading";
+
 import {
   Accordion,
   AccordionSummary,
@@ -9,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+// Images
 import DarkSkyWithStars from "../../images/DarkSkyWithStars.jpg";
 
 const GET_FALCON_ONE_INFO = gql`
@@ -46,7 +49,7 @@ const GET_FALCON_ONE_INFO = gql`
 export const GetFalconOneInfo = () => {
   const { loading, error, data } = useQuery(GET_FALCON_ONE_INFO);
 
-  if (loading) return <></>;
+  if (loading) return <Loading />;
   if (error) return "Error";
   const { rocket } = data;
   const {
@@ -63,7 +66,6 @@ export const GetFalconOneInfo = () => {
     stages,
     success_rate_pct,
   } = rocket;
-  console.log("active: ", active);
   return (
     <>
       <Grid container justifyContent="space-between">
@@ -89,7 +91,7 @@ export const GetFalconOneInfo = () => {
         </Grid>
       </Grid>
 
-      <Typography  sx={{ mb: 5 }}>{description}</Typography>
+      <Typography sx={{ mb: 5 }}>{description}</Typography>
 
       <Accordion>
         <AccordionSummary

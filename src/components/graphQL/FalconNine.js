@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
+
+import { Loading } from "../Loading";
+
 import {
   Backdrop,
   Box,
@@ -9,7 +12,7 @@ import {
   Modal,
   Typography,
 } from "@mui/material";
-
+// Images
 import FalconNineOne from "../../images/Falcon9One.jpg";
 import FalconNineTwo from "../../images/Falcon9Two.jpg";
 import FalconNineThree from "../../images/Falcon9Three.jpg";
@@ -71,7 +74,7 @@ export const GetFalconNineInfo = () => {
   const handleModalSixOpen = () => setModalSix(true);
   const handleModalSixClose = () => setModalSix(false);
 
-  if (loading) return <></>;
+  if (loading) return <Loading />;
   if (error) return "Error";
   const { rocket } = data;
   const {
@@ -120,7 +123,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
             onClick={handleModalOneOpen}
           >
@@ -248,7 +251,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
             onClick={handleModalThreeOpen}
           >
@@ -312,7 +315,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
             onClick={handleModalFourOpen}
           >
@@ -376,7 +379,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
             onClick={handleModalFiveOpen}
           >
@@ -440,7 +443,7 @@ export const GetFalconNineInfo = () => {
               border: "1px solid black",
               height: "100%",
               position: "relative",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
             onClick={handleModalSixOpen}
           >

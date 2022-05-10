@@ -1,11 +1,14 @@
 import { gql, useQuery } from "@apollo/client";
+
+import { Loading } from "../Loading";
+
 import { Box, Chip, Grid, Typography } from "@mui/material";
 import ReduceCapacityIcon from "@mui/icons-material/ReduceCapacity";
 import FlightIcon from "@mui/icons-material/Flight";
 import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import CircleIcon from "@mui/icons-material/Circle";
-import ScaleIcon from '@mui/icons-material/Scale';
-import HeightIcon from '@mui/icons-material/Height';
+import ScaleIcon from "@mui/icons-material/Scale";
+import HeightIcon from "@mui/icons-material/Height";
 const GET_DRAGON_ONE_INFO = gql`
   query ExampleQuery {
     dragon(id: "dragon1") {
@@ -20,18 +23,17 @@ const GET_DRAGON_ONE_INFO = gql`
       }
       dry_mass_kg
       height_w_trunk {
-      meters
-    }
+        meters
+      }
     }
   }
 `;
 
 export const GetDragonOneInfo = () => {
   const { loading, error, data } = useQuery(GET_DRAGON_ONE_INFO);
-  if (loading) return <></>;
+  if (loading) return <Loading />;
   if (error) return "Error";
 
-  console.log(data);
   const { dragon } = data;
   const {
     active,
@@ -42,7 +44,7 @@ export const GetDragonOneInfo = () => {
     orbit_duration_yr,
     diameter,
     dry_mass_kg,
-    height_w_trunk
+    height_w_trunk,
   } = dragon;
 
   return (
@@ -96,7 +98,7 @@ export const GetDragonOneInfo = () => {
           >
             <ReduceCapacityIcon sx={{ fontSize: "5rem" }} />
           </Box>
-          <Typography sx={{fontWeight: "bold"}}>Crew Capacity</Typography>
+          <Typography sx={{ fontWeight: "bold" }}>Crew Capacity</Typography>
           <Typography>{crew_capacity}</Typography>
         </Grid>
 
@@ -124,7 +126,7 @@ export const GetDragonOneInfo = () => {
           >
             <FlightIcon sx={{ fontSize: "5rem" }} />
           </Box>
-          <Typography sx={{fontWeight: "bold"}}>First Flight</Typography>
+          <Typography sx={{ fontWeight: "bold" }}>First Flight</Typography>
           <Typography>{first_flight}</Typography>
         </Grid>
 
@@ -152,7 +154,7 @@ export const GetDragonOneInfo = () => {
           >
             <TravelExploreIcon sx={{ fontSize: "5rem" }} />
           </Box>
-          <Typography sx={{fontWeight: "bold"}}>Orbit Duration</Typography>
+          <Typography sx={{ fontWeight: "bold" }}>Orbit Duration</Typography>
           <Typography>{orbit_duration_yr} years</Typography>
         </Grid>
 
@@ -180,7 +182,7 @@ export const GetDragonOneInfo = () => {
           >
             <CircleIcon sx={{ fontSize: "5rem" }} />
           </Box>
-          <Typography sx={{fontWeight: "bold"}}>Diameter</Typography>
+          <Typography sx={{ fontWeight: "bold" }}>Diameter</Typography>
           <Typography>{diameter.meters} m</Typography>
         </Grid>
 
@@ -208,7 +210,7 @@ export const GetDragonOneInfo = () => {
           >
             <ScaleIcon sx={{ fontSize: "5rem" }} />
           </Box>
-          <Typography sx={{fontWeight: "bold"}}>Dry Mass</Typography>
+          <Typography sx={{ fontWeight: "bold" }}>Dry Mass</Typography>
           <Typography>{dry_mass_kg} kg</Typography>
         </Grid>
 
@@ -236,7 +238,7 @@ export const GetDragonOneInfo = () => {
           >
             <HeightIcon sx={{ fontSize: "5rem" }} />
           </Box>
-          <Typography sx={{fontWeight: "bold"}}>Height with Trunk</Typography>
+          <Typography sx={{ fontWeight: "bold" }}>Height with Trunk</Typography>
           <Typography>{height_w_trunk.meters} m</Typography>
         </Grid>
       </Grid>

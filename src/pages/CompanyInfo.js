@@ -1,8 +1,9 @@
 import React from "react";
 import TopNav from "../components/TopNav";
 import LeftNav from "../components/LeftNav";
+import ErrorBoundary from "../components/ErrorBoundary";
 import { DRAWER_WIDTH } from "../_helper/constant";
-import { Box, Toolbar, CssBaseline, Paper} from "@mui/material";
+import { Box, Toolbar, CssBaseline, Paper } from "@mui/material";
 
 import { GetCompanyInfo } from "../components/graphQL/CompInfo";
 const CompanyInfo = () => {
@@ -16,13 +17,15 @@ const CompanyInfo = () => {
         sx={{
           height: "100%",
           flexGrow: 1,
-          p: {sm: 1, md: 3},
+          p: { sm: 1, md: 3 },
           width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
         }}
       >
         <Toolbar />
         <Paper elevation={4} sx={{ p: 3 }}>
-          <GetCompanyInfo/>
+          <ErrorBoundary>
+            <GetCompanyInfo />
+          </ErrorBoundary>
         </Paper>
       </Box>
     </Box>

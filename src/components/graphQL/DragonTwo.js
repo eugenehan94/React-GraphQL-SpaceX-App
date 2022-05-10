@@ -1,15 +1,19 @@
 import { gql, useQuery } from "@apollo/client";
+
+import { Loading } from "../Loading";
+
 import {
+  Avatar,
   Chip,
   Grid,
   List,
   ListItem,
   ListItemAvatar,
   ListItemText,
-  Avatar,
   Typography,
 } from "@mui/material";
 
+// Images
 import DragonTwoOne from "../../images/Dragon2One.jpg";
 import DragonTwoTwo from "../../images/Dragon2Two.jpg";
 import DragonTwoThree from "../../images/Dragon2Three.jpg";
@@ -38,7 +42,7 @@ const GET_DRAGON_TWO_INFO = gql`
 
 export const GetDragonTwoInfo = () => {
   const { loading, error, data } = useQuery(GET_DRAGON_TWO_INFO);
-  if (loading) return <></>;
+  if (loading) return <Loading />;
   if (error) return "Error";
 
   const { dragon } = data;
@@ -51,7 +55,7 @@ export const GetDragonTwoInfo = () => {
     dry_mass_kg,
     height_w_trunk,
     first_flight,
-    orbit_duration_yr
+    orbit_duration_yr,
   } = dragon;
 
   return (
@@ -123,7 +127,10 @@ export const GetDragonTwoInfo = () => {
           <ListItemAvatar>
             <Avatar src={DragonTwoSix} alt="Dragon 2 in space" />
           </ListItemAvatar>
-          <ListItemText primary="Orbit Duration" secondary={`${orbit_duration_yr} yr`} />
+          <ListItemText
+            primary="Orbit Duration"
+            secondary={`${orbit_duration_yr} yr`}
+          />
         </ListItem>
       </List>
     </>

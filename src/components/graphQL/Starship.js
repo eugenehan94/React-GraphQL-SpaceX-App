@@ -1,13 +1,16 @@
 import { gql, useQuery } from "@apollo/client";
+
+import { Loading } from "../Loading";
+
 import { Box, Grid, Chip, Typography } from "@mui/material";
 import RocketIcon from "@mui/icons-material/Rocket";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import SatelliteAltIcon from "@mui/icons-material/SatelliteAlt";
 import GradeIcon from "@mui/icons-material/Grade";
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import CircleIcon from '@mui/icons-material/Circle';
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import HeightIcon from '@mui/icons-material/Height';
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import CircleIcon from "@mui/icons-material/Circle";
+import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import HeightIcon from "@mui/icons-material/Height";
 const GET_STARSHIP_INFO = gql`
   query ExampleQuery {
     rocket(id: "starship") {
@@ -35,7 +38,7 @@ const GET_STARSHIP_INFO = gql`
 export const GetStarshipInfo = () => {
   const { loading, error, data } = useQuery(GET_STARSHIP_INFO);
 
-  if (loading) return <></>;
+  if (loading) return <Loading />;
   if (error) return "Error";
 
   const { rocket } = data;
@@ -50,7 +53,7 @@ export const GetStarshipInfo = () => {
     success_rate_pct,
     diameter,
     mass,
-    height
+    height,
   } = rocket;
 
   return (

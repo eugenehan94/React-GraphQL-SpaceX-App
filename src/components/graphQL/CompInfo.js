@@ -1,5 +1,9 @@
 import { gql, useQuery } from "@apollo/client";
 import { Box, Chip, Grid, Typography } from "@mui/material";
+
+import {Loading} from "../Loading"
+
+// Images
 import ElonMusk from "../../images/ElonMusk.jpg";
 import GwynneShotwell from "../../images/GwynneShotwell.jpg";
 import TomMueller from "../../images/TomMueller.jpg";
@@ -37,7 +41,7 @@ const GET_COMPANY_INFO = gql`
 export const GetCompanyInfo = () => {
   const { loading, error, data } = useQuery(GET_COMPANY_INFO);
 
-  if (loading) return <></>;
+  if (loading) return <Loading/>;
   if (error) return "Error";
 
   const { company } = data;

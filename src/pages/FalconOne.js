@@ -1,6 +1,7 @@
 import React from "react";
 import TopNav from "../components/TopNav";
 import LeftNav from "../components/LeftNav";
+import ErrorBoundary from "../components/ErrorBoundary";
 import { DRAWER_WIDTH } from "../_helper/constant";
 import { Box, Toolbar, CssBaseline, Paper, Typography } from "@mui/material";
 
@@ -16,13 +17,15 @@ const FalconOne = () => {
         sx={{
           height: "100%",
           flexGrow: 1,
-          p: {sm: 1, md: 3 },
+          p: { sm: 1, md: 3 },
           width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
         }}
       >
         <Toolbar />
         <Paper elevation={4} sx={{ p: 3 }}>
-          <GetFalconOneInfo/>
+          <ErrorBoundary>
+            <GetFalconOneInfo />
+          </ErrorBoundary>
         </Paper>
       </Box>
     </Box>

@@ -1,6 +1,8 @@
 import { gql, useQuery } from "@apollo/client";
+
+import { Loading } from "../Loading";
+
 import {
-  Box,
   Card,
   CardContent,
   CardMedia,
@@ -8,7 +10,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-
+// Images
 import FalconHeavyOne from "../../images/FalconHeavyHero.jpg";
 import FalconHeavyTwo from "../../images/FalconHeavyTwo.jpg";
 import FalconHeavyThree from "../../images/FalconHeavyThree.jpg";
@@ -35,18 +37,18 @@ const GET_FALCON_HEAVY_INFO = gql`
         meters
       }
       mass {
-      kg
-      lb
-    }
-    stages
-    success_rate_pct
+        kg
+        lb
+      }
+      stages
+      success_rate_pct
     }
   }
 `;
 export const GetFalconHeavyInfo = () => {
   const { loading, error, data } = useQuery(GET_FALCON_HEAVY_INFO);
 
-  if (loading) return <></>;
+  if (loading) return <Loading />;
   if (error) return "Error";
 
   const { rocket } = data;
@@ -61,9 +63,9 @@ export const GetFalconHeavyInfo = () => {
     height,
     mass,
     stages,
-    success_rate_pct
+    success_rate_pct,
   } = rocket;
-  console.log("rocket: ", rocket);
+
   return (
     <>
       <Grid container justifyContent="space-between">
@@ -94,8 +96,8 @@ export const GetFalconHeavyInfo = () => {
         <Grid item xs={12}>
           <Card sx={{ display: "flex", mt: 1 }}>
             <CardContent sx={{ flex: 1 }}>
-              <Typography sx={{fontWeight: "bold"}}>Boosters: </Typography>
-              <Typography >{boosters}</Typography>
+              <Typography sx={{ fontWeight: "bold" }}>Boosters: </Typography>
+              <Typography>{boosters}</Typography>
             </CardContent>
             <CardMedia
               component="img"
@@ -111,7 +113,9 @@ export const GetFalconHeavyInfo = () => {
         <Grid item xs={12}>
           <Card sx={{ display: "flex", mt: 1 }}>
             <CardContent sx={{ flex: 1 }}>
-              <Typography sx={{fontWeight: "bold"}}>Cost Per Launch: </Typography>
+              <Typography sx={{ fontWeight: "bold" }}>
+                Cost Per Launch:{" "}
+              </Typography>
               <Typography>${cost_per_launch}</Typography>
             </CardContent>
             <CardMedia
@@ -128,7 +132,7 @@ export const GetFalconHeavyInfo = () => {
         <Grid item xs={12}>
           <Card sx={{ display: "flex", mt: 1 }}>
             <CardContent sx={{ flex: 1 }}>
-              <Typography sx={{fontWeight: "bold"}}>Diameter: </Typography>
+              <Typography sx={{ fontWeight: "bold" }}>Diameter: </Typography>
               <Typography>{diameter.meters} m</Typography>
               <Typography>{diameter.feet} ft</Typography>
             </CardContent>
@@ -146,7 +150,9 @@ export const GetFalconHeavyInfo = () => {
         <Grid item xs={12}>
           <Card sx={{ display: "flex", mt: 1 }}>
             <CardContent sx={{ flex: 1 }}>
-              <Typography sx={{fontWeight: "bold"}}>First Flight: </Typography>
+              <Typography sx={{ fontWeight: "bold" }}>
+                First Flight:{" "}
+              </Typography>
               <Typography>{first_flight}</Typography>
             </CardContent>
             <CardMedia
@@ -163,7 +169,7 @@ export const GetFalconHeavyInfo = () => {
         <Grid item xs={12}>
           <Card sx={{ display: "flex", mt: 1 }}>
             <CardContent sx={{ flex: 1 }}>
-              <Typography sx={{fontWeight: "bold"}}>Height: </Typography>
+              <Typography sx={{ fontWeight: "bold" }}>Height: </Typography>
               <Typography>{height.meters} m</Typography>
               <Typography>{height.feet} ft</Typography>
             </CardContent>
@@ -181,7 +187,7 @@ export const GetFalconHeavyInfo = () => {
         <Grid item xs={12}>
           <Card sx={{ display: "flex", mt: 1 }}>
             <CardContent sx={{ flex: 1 }}>
-              <Typography sx={{fontWeight: "bold"}}>Mass: </Typography>
+              <Typography sx={{ fontWeight: "bold" }}>Mass: </Typography>
               <Typography>{mass.kg} kg</Typography>
               <Typography>{mass.lb} lb</Typography>
             </CardContent>
@@ -199,7 +205,7 @@ export const GetFalconHeavyInfo = () => {
         <Grid item xs={12}>
           <Card sx={{ display: "flex", mt: 1 }}>
             <CardContent sx={{ flex: 1 }}>
-              <Typography sx={{fontWeight: "bold"}}>Stage: </Typography>
+              <Typography sx={{ fontWeight: "bold" }}>Stage: </Typography>
               <Typography>{stages}</Typography>
             </CardContent>
             <CardMedia
@@ -216,7 +222,9 @@ export const GetFalconHeavyInfo = () => {
         <Grid item xs={12}>
           <Card sx={{ display: "flex", mt: 1 }}>
             <CardContent sx={{ flex: 1 }}>
-              <Typography sx={{fontWeight: "bold"}}>Success Rate: </Typography>
+              <Typography sx={{ fontWeight: "bold" }}>
+                Success Rate:{" "}
+              </Typography>
               <Typography>{success_rate_pct} %</Typography>
             </CardContent>
             <CardMedia
