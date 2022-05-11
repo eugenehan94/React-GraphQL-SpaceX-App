@@ -27,6 +27,9 @@ const LeftNav = (props) => {
   const handleDrawerToggle = () => {
     dispatch(toggleMobileOpen(!mobileOpen));
   };
+  const closeDrawer = () => {
+    dispatch(toggleMobileOpen(false))
+  }
   const drawer = (
     <div>
       {/* <Toolbar/> */}
@@ -35,49 +38,49 @@ const LeftNav = (props) => {
 
       <Divider sx={{ backgroundColor: "white" }} />
       <List>
-        <ListItem button component={Link} to="/">
+        <ListItem button component={Link} to="/" onClick={closeDrawer}>
           <ListItemIcon>
             <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
           <ListItemText primary="Welcome" />
         </ListItem>
-        <ListItem button component={Link} to="/companyInfo">
+        <ListItem button component={Link} to="/companyInfo"  onClick={closeDrawer}>
           <ListItemIcon>
             <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
           <ListItemText primary="Info" />
         </ListItem>
-        <ListItem button component={Link} to="/falcon1">
+        <ListItem button component={Link} to="/falcon1"  onClick={closeDrawer}>
           <ListItemIcon>
             <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
           <ListItemText primary="Falcon 1" />
         </ListItem>
-        <ListItem button component={Link} to="/falcon9">
+        <ListItem button component={Link} to="/falcon9"  onClick={closeDrawer}>
           <ListItemIcon>
             <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
           <ListItemText primary="Falcon 9" />
         </ListItem>
-        <ListItem button component={Link} to="/falconHeavy">
+        <ListItem button component={Link} to="/falconHeavy"  onClick={closeDrawer}>
           <ListItemIcon>
             <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
           <ListItemText primary="Falcon Heavy" />
         </ListItem>
-        <ListItem button component={Link} to="/starship">
+        <ListItem button component={Link} to="/starship"  onClick={closeDrawer}>
           <ListItemIcon>
             <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
           <ListItemText primary="Starship" />
         </ListItem>
-        <ListItem button component={Link} to="/dragon1">
+        <ListItem button component={Link} to="/dragon1"  onClick={closeDrawer}>
           <ListItemIcon>
             <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>
           <ListItemText primary="Dragon One" />
         </ListItem>
-        <ListItem button component={Link} to="/dragon2">
+        <ListItem button component={Link} to="/dragon2"  onClick={closeDrawer}>
           <ListItemIcon>
             <RocketIcon sx={{ color: "white" }} />
           </ListItemIcon>

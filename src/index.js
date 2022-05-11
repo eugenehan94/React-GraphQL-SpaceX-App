@@ -10,7 +10,7 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-
+import ScrollToTop from "./components/ScrollToTop"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 //Graphql for spaceX api https://studio.apollographql.com/public/SpaceX-pxxbxen/home?variant=current
@@ -24,9 +24,11 @@ root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <HashRouter>
+        <ScrollToTop>
         <Provider store={store}>
           <App />
         </Provider>
+        </ScrollToTop>
       </HashRouter>
     </ApolloProvider>
   </React.StrictMode>
