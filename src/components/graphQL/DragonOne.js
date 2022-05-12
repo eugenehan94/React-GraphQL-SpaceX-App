@@ -48,7 +48,7 @@ export const GetDragonOneInfo = () => {
   } = dragon;
 
   return (
-    <>
+    <Box>
       <Grid container justifyContent="space-between">
         <Grid item>
           <Typography variant="h2">{name}</Typography>
@@ -242,6 +242,6 @@ export const GetDragonOneInfo = () => {
           <Typography>{height_w_trunk.meters} m</Typography>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };

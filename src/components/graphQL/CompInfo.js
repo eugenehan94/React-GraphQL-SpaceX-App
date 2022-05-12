@@ -62,7 +62,7 @@ export const GetCompanyInfo = () => {
   } = company;
   const { address, city, state } = headquarters;
   return (
-    <>
+    <Box>
       <Typography gutterBottom variant="h2">
         Company Info
       </Typography>
@@ -592,6 +592,6 @@ export const GetCompanyInfo = () => {
           </Grid>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };

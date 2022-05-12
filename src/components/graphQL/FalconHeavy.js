@@ -3,6 +3,7 @@ import { gql, useQuery } from "@apollo/client";
 import { Loading } from "../Loading";
 
 import {
+  Box,
   Card,
   CardContent,
   CardMedia,
@@ -67,7 +68,7 @@ export const GetFalconHeavyInfo = () => {
   } = rocket;
 
   return (
-    <>
+    <Box>
       <Grid container justifyContent="space-between">
         <Grid item>
           <Typography variant="h2">{name}</Typography>
@@ -239,6 +240,6 @@ export const GetFalconHeavyInfo = () => {
           </Card>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };

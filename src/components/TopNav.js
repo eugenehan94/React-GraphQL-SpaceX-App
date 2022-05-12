@@ -14,10 +14,7 @@ const TopNav = () => {
   const data = useSelector((state) => state)
   const dispatch = useDispatch();
   const {mobileOpen} = data.topNavReducer;
-  //NOTE: repeats in App.js - state has to be passed upwards to set state to open drawer in mobile
-  // const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
-    // setMobileOpen(!mobileOpen);
     dispatch(toggleMobileOpen(!mobileOpen));
   };
 

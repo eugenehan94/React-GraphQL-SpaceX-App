@@ -67,7 +67,7 @@ export const GetFalconOneInfo = () => {
     success_rate_pct,
   } = rocket;
   return (
-    <>
+    <Box>
       <Grid container justifyContent="space-between">
         <Grid item>
           <Typography variant="h2">{name}</Typography>
@@ -192,7 +192,6 @@ export const GetFalconOneInfo = () => {
                 color: "white",
               }}
             >
-              {" "}
               ${cost_per_launch}
             </Typography>
           </Box>
@@ -438,6 +437,6 @@ export const GetFalconOneInfo = () => {
           </Box>
         </AccordionDetails>
       </Accordion>
-    </>
+    </Box>
   );
 };

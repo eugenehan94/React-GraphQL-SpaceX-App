@@ -90,7 +90,7 @@ export const GetFalconNineInfo = () => {
   } = rocket;
 
   return (
-    <>
+    <Box>
       <Grid container justifyContent="space-between">
         <Grid item>
           <Typography variant="h2">{name}</Typography>
@@ -502,6 +502,6 @@ export const GetFalconNineInfo = () => {
           </Modal>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };

@@ -4,6 +4,7 @@ import { Loading } from "../Loading";
 
 import {
   Avatar,
+  Box,
   Chip,
   Grid,
   List,
@@ -59,7 +60,7 @@ export const GetDragonTwoInfo = () => {
   } = dragon;
 
   return (
-    <>
+    <Box>
       <Grid container justifyContent="space-between">
         <Grid item>
           <Typography variant="h2">{name}</Typography>
@@ -133,6 +134,6 @@ export const GetDragonTwoInfo = () => {
           />
         </ListItem>
       </List>
-    </>
+    </Box>
   );
 };

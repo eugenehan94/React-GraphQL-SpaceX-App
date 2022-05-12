@@ -57,7 +57,7 @@ export const GetStarshipInfo = () => {
   } = rocket;
 
   return (
-    <>
+    <Box>
       <Grid container justifyContent="space-between">
         <Grid item>
           <Typography variant="h2">{name}</Typography>
@@ -333,6 +333,6 @@ export const GetStarshipInfo = () => {
           <Typography sx={{ color: "white" }}>{height.meters} m</Typography>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };
