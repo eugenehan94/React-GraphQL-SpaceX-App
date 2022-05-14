@@ -11,6 +11,13 @@ https://eugenehan94.github.io/React-GraphQL-SpaceX-App/
 ## Falcon 1 and Falcon 9
 ![SpaceXTwoGif](https://user-images.githubusercontent.com/59939048/168404336-ee43e73c-d576-4f38-967a-04688c0f2656.gif)
 
+## Falcon Heavy and Starship
+![SpaceXThreeGif](https://user-images.githubusercontent.com/59939048/168404879-8ff3d665-e8ca-4c1c-ac4d-c8283d8fde6f.gif)
+
+## Dragon 1 and Dragon 2
+![SpaceXFourGif](https://user-images.githubusercontent.com/59939048/168404895-8a14bb2d-a13f-4c32-a825-84f6d217c5a9.gif)
+
+
 --------------------------------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
