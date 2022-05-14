@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-GraphQL-SpaceX-App/static/css/main.31d6cfe0.css",
-    "main.js": "/React-GraphQL-SpaceX-App/static/js/main.6cf58a9b.js",
+    "main.js": "/React-GraphQL-SpaceX-App/static/js/main.67af5a29.js",
     "static/js/787.f4cc195c.chunk.js": "/React-GraphQL-SpaceX-App/static/js/787.f4cc195c.chunk.js",
     "static/media/Facilities.jpg": "/React-GraphQL-SpaceX-App/static/media/Facilities.d2e408d3c4177ec5108d.jpg",
     "static/media/Falcon9Five.jpg": "/React-GraphQL-SpaceX-App/static/media/Falcon9Five.71d3414b59db8e959378.jpg",
@@ -34,11 +34,11 @@
     "static/media/Dragon2Four.jpg": "/React-GraphQL-SpaceX-App/static/media/Dragon2Four.32507c62399413a05c1a.jpg",
     "static/media/FalconHeavyFour.jpg": "/React-GraphQL-SpaceX-App/static/media/FalconHeavyFour.b14a1e4cf79e858b3034.jpg",
     "index.html": "/React-GraphQL-SpaceX-App/index.html",
-    "main.6cf58a9b.js.map": "/React-GraphQL-SpaceX-App/static/js/main.6cf58a9b.js.map",
+    "main.67af5a29.js.map": "/React-GraphQL-SpaceX-App/static/js/main.67af5a29.js.map",
     "787.f4cc195c.chunk.js.map": "/React-GraphQL-SpaceX-App/static/js/787.f4cc195c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.6cf58a9b.js"
+    "static/js/main.67af5a29.js"
   ]
 }
