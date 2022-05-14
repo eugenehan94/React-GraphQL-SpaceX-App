@@ -1,6 +1,17 @@
+# React GraphQL SpaceX App
+This project was created using React, GraphQL and Material UI V5
+
+# Link to live project
 https://eugenehan94.github.io/React-GraphQL-SpaceX-App/
 
+# Demo
+## Welcome and Info
+![SpaceXOneGif](https://user-images.githubusercontent.com/59939048/168404275-a86779e4-95fe-4f90-ad95-1851a0b1cf85.gif)
 
+## Falcon 1 and Falcon 9
+![SpaceXTwoGif](https://user-images.githubusercontent.com/59939048/168404336-ee43e73c-d576-4f38-967a-04688c0f2656.gif)
+
+--------------------------------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
